@@ -25,10 +25,15 @@ target/
 
 #gradle
 
-
 .gradle
-/gradle/
+/.gradle/
 
+# Gradle files
+.gradle/
+build/
+*/build/
+gradlew
+gradlew.bat
 
 #idea
 
