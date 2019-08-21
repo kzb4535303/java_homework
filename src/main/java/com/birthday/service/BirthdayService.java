@@ -12,9 +12,7 @@ public class BirthdayService {
     public List<String> findBirthDaysPersons() {
         List<String> personList = new ArrayList<>();
         personList = FileReadUtil.getFileLineList("C:\\Users\\Administrator.PC-20170908VIYI\\IdeaProjects\\Condee\\src\\main\\resources\\employee_records.txt");
-
         String today = LocalDateTime.now().format(DateTimeFormatter.ofPattern("MM/dd"));
-
         List<String> birthDayPersonList = personList.stream().filter((item) -> {
             return item.contains(today);
         }).collect(Collectors.toList());
